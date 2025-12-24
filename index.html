@@ -37,7 +37,6 @@
         position: relative;
       }
 
-      /* --- Floating Bubbles --- */
       .bubble-wrapper {
         position: fixed;
         top: 0;
@@ -70,7 +69,6 @@
         }
       }
 
-      /* --- Hero --- */
       .hero {
         height: 100vh;
         display: flex;
@@ -109,7 +107,6 @@
         }
       }
 
-      /* --- Global Sections --- */
       .section-title {
         text-align: center;
         margin: 100px 0 50px;
@@ -118,7 +115,12 @@
         text-transform: uppercase;
         letter-spacing: 2px;
       }
-      .grid-container,
+      .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        padding: 0 10%;
+      }
       .projects-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
