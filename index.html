@@ -141,7 +141,8 @@
       }
       .project-card {
         position: relative;
-        height: 230px;
+        height: auto;
+        min-height: 230px;
         background: var(--card-bg);
         backdrop-filter: blur(10px);
         padding: 40px;
@@ -250,7 +251,15 @@
         .hero-content h1 {
           font-size: 3rem;
         }
+
+        .grid-container, 
+        .projects-grid {
+        padding: 0 5%;
+        grid-template-columns: 1fr; 
+    }
       }
+
+      
     </style>
   </head>
   <body>
