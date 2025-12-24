@@ -121,15 +121,25 @@
       .grid-container,
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
         gap: 25px;
         padding: 0 10%;
       }
       .project-card h3,p{
         padding-bottom: 15px;
       }
-      .card,
+      .card{
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 24px;
+        text-align: center;
+        transition: 0.4s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
       .project-card {
+        position: relative;
+        height: 230px;
         background: var(--card-bg);
         backdrop-filter: blur(10px);
         padding: 40px;
@@ -149,17 +159,15 @@
         margin-bottom: 20px;
         color: var(--accent-color);
       }
-      /* Styling for project images */
-.project-img {
+ .project-img {
     width: 100%;
-    height: 180px; /* Fixed height for consistency */
-    object-fit: cover; /* Crops image to fit without stretching */
-    border-radius: 15px; /* Matches card aesthetic */
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 15px; 
     margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Optional: Add a slight zoom effect on hover */
 .project-card:hover .project-img {
     transform: scale(1.03);
     transition: 0.3s ease;
@@ -184,7 +192,6 @@
         margin-right: 10px;
       }
 
-      /* --- CTA Button --- */
       .cta-button {
         display: inline-block;
         background: var(--accent-color);
@@ -204,6 +211,10 @@
       }
 
       .github-link {
+        position: absolute; 
+        bottom: 30px; 
+        left: 50%; 
+        transform: translateX(-50%); 
         display: inline-block;
         margin-top: 15px;
         color: var(--accent-color);
@@ -214,6 +225,7 @@
         border-radius: 50px;
         transition: 0.3s;
       }
+
       .github-link:hover {
         background: var(--accent-color);
         color: white;
@@ -342,17 +354,18 @@
 
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
+
       <div class="project-card" data-aos="fade-up">
-        <!-- <img src="images/binary-game-preview.jpg" alt="Binary Game" class="project-img"> -->
-        <h3>Binary Game</h3>
-        <p>Interactive logic training game.</p>
+        <h3>Bank System</h3>
+        <p>Bank manger dashboard implemented many Design Patterns.</p>
         <a
-          href="https://github.com/jenny-kaspo/binarygame"
+          href="https://github.com/jenny-kaspo/Bank-System"
           target="_blank"
           class="github-link"
           >View Repo</a
-        >
+          >
       </div>
+      
          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
         <h3>Khotwa Dashboard</h3>
         <p>Admin panel for Khotwa platform.</p>
@@ -365,17 +378,23 @@
       </div>
          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
             <h3>Web Applications</h3>
-            <p>Collection of small-scale web tools.</p>
+            <p>Complaintes Admin and Employees Governmental platform.</p>
             <a href="https://github.com/jenny-kaspo/web-applications" target="_blank" class="github-link">View Repo</a>
         </div>
-   
-        <div class="project-card" data-aos="fade-up">
-            <h3>Pure JS Products</h3>
-            <p>CRUD operations with Vanilla JS.</p>
-            <a href="https://github.com/jenny-kaspo/pure-js-products" target="_blank" class="github-link">View Repo</a>
-        </div>
 
-          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-card" data-aos="fade-up">
+        <!-- <img src="images/binary-game-preview.jpg" alt="Binary Game" class="project-img"> -->
+        <h3>Binary Game</h3>
+        <p>Interactive logic training game with AI search algorithms like UCS, A* and Climbing Hill.</p>
+        <a
+          href="https://github.com/jenny-kaspo/binarygame"
+          target="_blank"
+          class="github-link"
+          >View Repo</a
+          >
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
         <h3>Angular Products</h3>
         <p>Dynamic product management app.</p>
         <a
@@ -385,6 +404,11 @@
           >View Repo</a
         >
       </div>
+       <div class="project-card" data-aos="fade-up">
+            <h3>Pure JS Products</h3>
+            <p>CRUD operations with Vanilla JS.</p>
+            <a href="https://github.com/jenny-kaspo/pure-js-products" target="_blank" class="github-link">View Repo</a>
+        </div>
      
     </div>
 
